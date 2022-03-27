@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/contactus/contactus.feature"},
+        features = {"src/test/resources/features/contactus/contactUs.feature"},
         glue = {"co.com.sofka.stepdefinition.contacus"},
         tags = {""}
 )

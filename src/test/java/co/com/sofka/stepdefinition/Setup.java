@@ -1,11 +1,11 @@
-/*package co.com.sofka.stepdefinition;
+package co.com.sofka.stepdefinition;
 
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
-
 import org.openqa.selenium.WebDriver;
+
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
@@ -34,4 +34,3 @@ public class Setup {
 
     }
 }
-*/
