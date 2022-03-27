@@ -4,8 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-import static org.openqa.selenium.By.id;
-import static org.openqa.selenium.By.xpath;
+import static org.openqa.selenium.By.*;
 
 public class ContactUs extends PageObject {
     public static final Target CONTACTUS = Target
@@ -27,6 +26,14 @@ public class ContactUs extends PageObject {
     public static final Target SUBMIT = Target
             .the("submit")
             .located(id("submitMessage"));
+
+    public static final Target MESSAGE_SUCCESSFULLY = Target
+            .the("message_successfully")
+            .located(cssSelector(".alert"));
+
+    public static final Target MESSAGE_UNSUCCESSFULLY = Target
+            .the("message_unsuccessfully")
+            .located(cssSelector("ol > li"));
 
 
 

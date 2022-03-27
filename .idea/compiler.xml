@@ -6,6 +6,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SerenityWebUI.main" options="--add-modules java.base" />
+      <module name="SerenityWebUI.test" options="--add-modules java.base" />
     </option>
   </component>
 </project>
