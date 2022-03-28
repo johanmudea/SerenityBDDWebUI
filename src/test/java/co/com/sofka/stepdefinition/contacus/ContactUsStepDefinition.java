@@ -1,7 +1,7 @@
 package co.com.sofka.stepdefinition.contacus;
 
 import co.com.sofka.stepdefinition.Setup;
-import io.cucumber.core.gherkin.vintage.internal.gherkin.ast.DataTable;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,12 +12,10 @@ import static co.com.sofka.question.contactus.ContactUsFailed.contactUsFailed;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.contactus.BrowseToContactUs.browseToContactUs;
 import static co.com.sofka.task.contactus.FillContactUs.fillContactUs;
-//import static co.com.sofka.userinterface.contactus.ContactUS.*;
-import static co.com.sofka.userinterface.practiceform.ContactUs.EMAIL;
-import static co.com.sofka.util.Subject.WEBMASTER;
+
 import static java.lang.Math.random;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.actions.SelectFromOptions.byIndex;
+
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 

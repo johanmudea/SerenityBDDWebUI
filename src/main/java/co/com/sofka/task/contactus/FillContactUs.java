@@ -1,16 +1,14 @@
 package co.com.sofka.task.contactus;
 
-import co.com.sofka.util.Subject;
+
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
+
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
-import net.serenitybdd.screenplay.conditions.Check;
-import net.serenitybdd.screenplay.targets.Target;
+
 
 import static co.com.sofka.userinterface.practiceform.ContactUs.*;
-import static co.com.sofka.util.Subject.CUSTOMER_SERVICE;
-import static co.com.sofka.util.Subject.WEBMASTER;
+
 
 public class FillContactUs implements Task {
 
@@ -44,7 +42,7 @@ public class FillContactUs implements Task {
                 Scroll.to(MESSAGE),
                 Enter.theValue(message).into(MESSAGE),
 
-                Scroll.to(EMAIL),
+                Scroll.to(SUBJECT),
                 Click.on(SUBJECT),
                 SelectFromOptions.byVisibleText("Webmaster").from(SUBJECT),
 

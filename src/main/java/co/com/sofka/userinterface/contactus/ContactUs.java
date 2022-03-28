@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import static org.openqa.selenium.By.*;
 
 public class ContactUs extends PageObject {
+
     public static final Target CONTACTUS = Target
             .the("Contact us")
             .located(By.id("contact-link"));
