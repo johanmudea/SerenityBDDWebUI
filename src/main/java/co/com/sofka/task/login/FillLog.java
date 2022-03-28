@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
 
+
 import static co.com.sofka.userinterface.login.Login.*;
 
 
@@ -35,10 +36,12 @@ public class FillLog implements Task {
 
                 Scroll.to(EMAILLOGIN),
                 Click.on(EMAILLOGIN),
-                Enter.theValue(emailLogin).into(EMAILLOGIN),
+                Enter.theValue("johanmm123@hotmail.com").into(EMAILLOGIN),
 
                 Click.on(PASSWD),
                 Enter.theValue(password).into(PASSWD),
+
+
                 Click.on(SUBMITLOGIN)
         );
 

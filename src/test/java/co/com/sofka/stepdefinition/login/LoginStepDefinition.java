@@ -4,13 +4,16 @@ import co.com.sofka.stepdefinition.Setup;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.hamcrest.Matchers;
 
+import static co.com.sofka.question.register.Register.register;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.login.FillLog.fillLog;
 import static co.com.sofka.task.login.FillPreLogin.fillPreLogin;
 import static co.com.sofka.task.register.BrowseToRegister.browseToregister;
 
 import static java.lang.Math.random;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class LoginStepDefinition extends Setup {
@@ -18,7 +21,7 @@ public class LoginStepDefinition extends Setup {
     private String usedeMail;
 
     public static String usedMail(){
-        return "johan"+random()+"@hotmail.com";
+        return "johanmm123@hotmail.com";
     }
 
 
@@ -43,7 +46,7 @@ public class LoginStepDefinition extends Setup {
 
         theActorInTheSpotlight().attemptsTo(
                 fillPreLogin()
-                        .usingEmail("johan123@gmail.com")
+                        .usingEmail(usedeMail)
                         .usingFirstName("firstName")
                         .usingLastName("LastName")
                         .usingPassword("password")
@@ -64,7 +67,7 @@ public class LoginStepDefinition extends Setup {
 
         theActorInTheSpotlight().attemptsTo(
                 fillLog()
-                        .usingEmailLogin("johan123@gmail.com")
+                        .usingEmailLogin(usedeMail)
                         .usingPassword("password")
 
         );
@@ -74,6 +77,9 @@ public class LoginStepDefinition extends Setup {
     }
     @Then("the user will see a confirmation message.")
     public void theUserWillSeeAConfirmationMessage() {
+
+        theActorInTheSpotlight().should(
+                seeThat(register(), Matchers.equalTo(true)));
 
     }
 

@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.actions.*;
 
 import static co.com.sofka.task.register.FillRegister.usedEmail;
 import static co.com.sofka.userinterface.register.Register.*;
-import static java.lang.Math.random;
+
 
 
 public class FillPreLogin implements Task {
@@ -102,7 +102,7 @@ public class FillPreLogin implements Task {
 
         actor.attemptsTo(
 
-                Enter.theValue("johan123@gmail.com").into(EMAILR),
+                Enter.theValue(Email).into(EMAILR),
                 Click.on(CREATEANACCOUNT),
 
                 Scroll.to(FIRSTNAME),
