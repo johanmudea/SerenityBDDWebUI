@@ -28,7 +28,7 @@ public class Register extends PageObject {
 
     public static final Target PASSWORD = Target
             .the("password")
-            .located(By.id("password"));
+            .located(By.id("passwd"));
 
     public static final Target ADDRESS = Target
             .the("address")
@@ -54,7 +54,7 @@ public class Register extends PageObject {
 
     public static final Target PHONE = Target
             .the("Phone")
-            .located(By.id("phone_module"));
+            .located(By.id("phone_mobile"));
 
     public static final Target REGISTERBUTTON = Target
             .the("Register")

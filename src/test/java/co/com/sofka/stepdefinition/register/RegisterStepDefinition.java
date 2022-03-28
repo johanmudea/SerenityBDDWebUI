@@ -37,6 +37,7 @@ public class RegisterStepDefinition extends Setup {
     }
     @When("him has filled it and submitted")
     public void himHasFilledItAndSubmitted() {
+        
 
         theActorInTheSpotlight().attemptsTo(
                 fillRegister()
@@ -48,9 +49,9 @@ public class RegisterStepDefinition extends Setup {
                         .usingAddress("address")
                         .usingCity("city")
                         .usingState("state")
-                        .usingZipCode("postalCode")
+                        .usingZipCode("05001")
                         .usingCountry("country")
-                        .usingPhone("phone")
+                        .usingPhone("4122735411")
 
 
 
