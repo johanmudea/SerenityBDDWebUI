@@ -3,7 +3,7 @@ package co.com.sofka.question.register;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static co.com.sofka.userinterface.practiceform.ContactUs.MESSAGE_SUCCESSFULLY;
+
 import static co.com.sofka.userinterface.register.Register.ERRORZIP;
 import static co.com.sofka.userinterface.register.Register.INFOACCOUNT;
 

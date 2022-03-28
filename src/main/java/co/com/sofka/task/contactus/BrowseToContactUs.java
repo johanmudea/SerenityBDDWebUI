@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 
-import static co.com.sofka.userinterface.practiceform.ContactUs.CONTACTUS;
+import static co.com.sofka.userinterface.contactus.ContactUs.CONTACTUS;
 
 
 public class BrowseToContactUs implements Task {

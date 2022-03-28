@@ -3,7 +3,8 @@ package co.com.sofka.question.contactus;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static co.com.sofka.userinterface.practiceform.ContactUs.MESSAGE_SUCCESSFULLY;
+import static co.com.sofka.userinterface.contactus.ContactUs.MESSAGE_SUCCESSFULLY;
+
 
 public class ContactUs implements Question<Boolean> {
 

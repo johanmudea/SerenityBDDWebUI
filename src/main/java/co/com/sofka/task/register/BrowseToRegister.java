@@ -18,12 +18,9 @@ public class BrowseToRegister implements Task {
                     Click.on(SIGIN),
 
                     Scroll.to(EMAILR),
-                    Click.on(EMAILR),
+                    Click.on(EMAILR)
 
-                    Enter.theValue("johan"+random()+"@hotmail.com").into(EMAILR),
-                    Click.on(CREATEANACCOUNT),
 
-                    Scroll.to(FIRSTNAME)
 
             );
         }

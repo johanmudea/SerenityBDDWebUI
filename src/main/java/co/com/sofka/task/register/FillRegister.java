@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.actions.*;
 
 
 import static co.com.sofka.userinterface.register.Register.*;
+import static java.lang.Math.random;
 
 
 public class FillRegister implements Task {
@@ -28,6 +29,7 @@ public class FillRegister implements Task {
     private String Country;
     private String Phone;
     private String Register;
+
 
     public FillRegister usingSign_in(String sign_in) {
         Sign_in = sign_in;
@@ -95,19 +97,18 @@ public class FillRegister implements Task {
         return this;
     }
 
+    public static String usedEmail(){
+
+        return "johan"+random()+"@hotmail.com";
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
 
-             /*   Scroll.to(SIGIN),
-                Enter.theValue(Sign_in).into(SIGIN),
-
-                Scroll.to(EMAILR),
-                Enter.theValue(Email).into(EMAILR),
-
-                Scroll.to(CREATEANACCOUNT),
-                Enter.theValue(CreateAnAccount).into(CREATEANACCOUNT),*/
+                Enter.theValue(usedEmail()).into(EMAILR),
+                Click.on(CREATEANACCOUNT),
 
                 Scroll.to(FIRSTNAME),
                 Enter.theValue(FirstName).into(FIRSTNAME),

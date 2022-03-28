@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="0de7f8df09fb65aa4076acd86a283097a24620b751abb35baa1369f2fb2a46fa.html">Automation Testing Using Screenplay Pattern.</a></span>
+                > <span class="truncate-60"><a
+                    href="55d8d45b1cbc3ab1491fb47a0ee97704d44c784ef594d0f17d333ce624e35d4e.html">Fill a contact us login form using credentials </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-03-2022 00:00</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Automation Testing Using Screenplay Pattern. </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As an automation tester<br />
+I need to practice automation testing using Screenplay patter<br />
+for learn about serenity BDD framework
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Fill a contact us login form using credentials
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Null pointer exception</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.NullPointerException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sofka.task.login.FillLog.performAs(FillLog.java:31)<br />co.com.sofka.stepdefinition.login.LoginStepDefinition.himHasFilledItAndSubmitted(LoginStepDefinition.java:65)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource14174595140576175044.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Given the user is on landing page" width="1920"/>
+                <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Johan open landing page" width="1920"/>
+                <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Johan opens the Landing page" width="1920"/>
+                <img src="8ba97e2b450280d4ddde0e64fb2dff0435c41da0b96bf758d9ddcce0e6c848e1.png" title=" Johan opens the Landing page (completed)" width="1920"/>
+                <img src="8ba97e2b450280d4ddde0e64fb2dff0435c41da0b96bf758d9ddcce0e6c848e1.png" title=" Johan open landing page (completed)" width="1920"/>
+                <img src="8ba97e2b450280d4ddde0e64fb2dff0435c41da0b96bf758d9ddcce0e6c848e1.png" title=" Given the user is on landing page (completed)" width="1920"/>
+                <img src="1c711dc8228157cd01086be6c8f5456370c680105a8b6c2152ba03c79e1c52b1.png" title=" When him browse to login" width="1920"/>
+                <img src="1c711dc8228157cd01086be6c8f5456370c680105a8b6c2152ba03c79e1c52b1.png" title=" Johan browse to register" width="1920"/>
+                <img src="1c711dc8228157cd01086be6c8f5456370c680105a8b6c2152ba03c79e1c52b1.png" title=" Johan clicks on SignIn" width="1920"/>
+                <img src="1b5fb88c08d75d6e8930cb8141a1d31ef10c93b825c5af047e53f7d74b944b3b.png" title=" Johan clicks on SignIn (completed)" width="1920"/>
+                <img src="81abfda0303840fbfa54a67d170d8ec77defb5445805b9f47673cde8bc8eff65.png" title=" Johan clicks on Email" width="1920"/>
+                <img src="7e8eb1a76388c6823bff965d537bd9cc2ac3a5cf03371d23f6d7b7961aaf365c.png" title=" Johan clicks on Email (completed)" width="1920"/>
+                <img src="7e8eb1a76388c6823bff965d537bd9cc2ac3a5cf03371d23f6d7b7961aaf365c.png" title=" Johan browse to register (completed)" width="1920"/>
+                <img src="7e8eb1a76388c6823bff965d537bd9cc2ac3a5cf03371d23f6d7b7961aaf365c.png" title=" Johan fill pre login" width="1920"/>
+                <img src="dd379820d5ba0e91ef4ae05d486424f53c00e8bd4a26a028a5a60771aa5c22b3.png" title=" Johan enters 'johan123@gmail.com' into Email" width="1920"/>
+                <img src="0d04121de36ee5f9fcf1459411fc0978dc1b305f2ab55be4cdedcf7f288adfba.png" title=" Johan enters 'johan123@gmail.com' into Email (completed)" width="1920"/>
+                <img src="0d04121de36ee5f9fcf1459411fc0978dc1b305f2ab55be4cdedcf7f288adfba.png" title=" Johan clicks on CreateAnAccount" width="1920"/>
+                <img src="f9d6cd036efe1cca31fc5ddaf4636a8d7afa09e8345a7be1209039c007ec88be.png" title=" Johan clicks on CreateAnAccount (completed)" width="1920"/>
+                <img src="6a2da443e0fdb3e3b47176a85b1617f85a318be78a303371f848b1b6289b423f.png" title=" Johan enters 'firstName' into FirstName" width="1920"/>
+                <img src="5bde8e2926e2d8e9e9e971c9a06d9e5a2cdbc60e864d1ecaf514258ee7e73bed.png" title=" Johan enters 'firstName' into FirstName (completed)" width="1920"/>
+                <img src="47fd0372c2d3b1d1fe1e6a0e367472c1bd3c440d8072394cc3e63c4421e35b49.png" title=" Johan enters 'LastName' into LastName" width="1920"/>
+                <img src="bb747346a46a9803c55aa348c1f0e10d20978d003289dca56c1442905bd24133.png" title=" Johan enters 'LastName' into LastName (completed)" width="1920"/>
+                <img src="a06ffee98026de49c78346f24c99e92945b73d507b7239ca33b6a7680ca068d8.png" title=" Johan enters 'password' into password" width="1920"/>
+                <img src="e795048bb4b6732262bb9573dc61908f9d55cf5b7b4d3e3d07d9a40c756a3078.png" title=" Johan enters 'password' into password (completed)" width="1920"/>
+                <img src="33080d328ef9e3c4bea0197b7ad6da8926a5dbca5b57eee31d36cb82789eec92.png" title=" Johan enters 'address' into address" width="1920"/>
+                <img src="6d2d41b829183065ead672a4f6304d55b53cbb158874d68515fa4e664cebc74b.png" title=" Johan enters 'address' into address (completed)" width="1920"/>
+                <img src="9649a4d3d7fdb30367dfb9afe55409a8ca89f6948ac95352a90792051f320880.png" title=" Johan enters 'city' into city" width="1920"/>
+                <img src="b8dac60a082701dd6c6b5f45d7705f6c2f62e5b7601d6d46858956d1a4dce239.png" title=" Johan enters 'city' into city (completed)" width="1920"/>
+                <img src="be3ce50ad1fea8d6cdac6bda52dab08e050b194a053709f3ba70cc2dd0b8a3ef.png" title=" Johan clicks on State" width="1920"/>
+                <img src="50b9b56b94bd846eeba2e0165028339e82c0408b3b891aedcce285f489d92eaf.png" title=" Johan clicks on State (completed)" width="1920"/>
+                <img src="50b9b56b94bd846eeba2e0165028339e82c0408b3b891aedcce285f489d92eaf.png" title=" Johan select Alaska on State" width="1920"/>
+                <img src="99927f210fa47a999be8e4828230b4098cf3f79601c1d9a20896c752704d0904.png" title=" Johan select Alaska on State (completed)" width="1920"/>
+                <img src="990c9a717fba8d577a1fd7753966eb4f59d1f6442f9aa0054828a32cade9ee4f.png" title=" Johan enters '05001' into ZipCode" width="1920"/>
+                <img src="43c81563305c8b0090a6ca5af2f45c5190deee98c3dabf2fbf5f415d8eccd9ac.png" title=" Johan enters '05001' into ZipCode (completed)" width="1920"/>
+                <img src="99ddb3dec49fe5b2fb21d656dba57ba7eddd0b3293959100dcc22473044d09c9.png" title=" Johan clicks on Country" width="1920"/>
+                <img src="c05671cdbfad5a087cbad24f9d85ecc118bae3908c5e371fb7f565ef44c82a11.png" title=" Johan clicks on Country (completed)" width="1920"/>
+                <img src="c05671cdbfad5a087cbad24f9d85ecc118bae3908c5e371fb7f565ef44c82a11.png" title=" Johan select United States on Country" width="1920"/>
+                <img src="c05671cdbfad5a087cbad24f9d85ecc118bae3908c5e371fb7f565ef44c82a11.png" title=" Johan select United States on Country (completed)" width="1920"/>
+                <img src="4d4994183b47baf5dc90364c3f726db2a42815e73579172a35b2374d9dceb11c.png" title=" Johan enters '4122735411' into Phone" width="1920"/>
+                <img src="e59e02924d975458e3a1cf40e1625e70bdd18b9060cb76993b58a163f69502f8.png" title=" Johan enters '4122735411' into Phone (completed)" width="1920"/>
+                <img src="e59e02924d975458e3a1cf40e1625e70bdd18b9060cb76993b58a163f69502f8.png" title=" Johan clicks on Register" width="1920"/>
+                <img src="d2f502cbba4403a13573e620ca6922c2ba0981ebdbe7d2eb130663e579c0b61e.png" title=" Johan clicks on Register (completed)" width="1920"/>
+                <img src="d2f502cbba4403a13573e620ca6922c2ba0981ebdbe7d2eb130663e579c0b61e.png" title=" Johan fill pre login (completed)" width="1920"/>
+                <img src="d2f502cbba4403a13573e620ca6922c2ba0981ebdbe7d2eb130663e579c0b61e.png" title=" When him browse to login (completed)" width="1920"/>
+                <img src="d2f502cbba4403a13573e620ca6922c2ba0981ebdbe7d2eb130663e579c0b61e.png" title=" And him has filled it and submitted" width="1920"/>
+                <img src="f82beb660710b1d725f4367abad4e3f2da6579c5a7dbe50128b8782be11fe73a.png" title=" Johan fill log" width="1920"/>
+                <img src="f82beb660710b1d725f4367abad4e3f2da6579c5a7dbe50128b8782be11fe73a.png" title=" Johan clicks on Signout" width="1920"/>
+                <img src="1b5fb88c08d75d6e8930cb8141a1d31ef10c93b825c5af047e53f7d74b944b3b.png" title=" Johan clicks on Signout (completed)" width="1920"/>
+                <img src="81abfda0303840fbfa54a67d170d8ec77defb5445805b9f47673cde8bc8eff65.png" title=" Johan clicks on Email" width="1920"/>
+                <img src="82acd94e24ed9622f92ac8f9e81412dd8c5397859685f1a7ab8918cc1b6677fa.png" title=" Johan clicks on Email (completed)" width="1920"/>
+                <img src="82acd94e24ed9622f92ac8f9e81412dd8c5397859685f1a7ab8918cc1b6677fa.png" title=" Johan fill log (completed): <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

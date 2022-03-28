@@ -18,7 +18,7 @@ import static co.com.sofka.task.contactus.FillContactUs.fillContactUs;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.register.BrowseToRegister.browseToregister;
 import static co.com.sofka.task.register.FillRegister.fillRegister;
-import static co.com.sofka.userinterface.practiceform.ContactUs.SUBMIT;
+
 import static java.lang.Math.random;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -123,7 +123,6 @@ public void theUserWillSeeAPostalCodeErrorMessage() {
             seeThat(registerZipError(), Matchers.equalTo(true)));
 
     }
-
 
 
 }

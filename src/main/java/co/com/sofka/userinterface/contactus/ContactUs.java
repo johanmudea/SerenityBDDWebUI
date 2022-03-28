@@ -1,4 +1,4 @@
-package co.com.sofka.userinterface.practiceform;
+package co.com.sofka.userinterface.contactus;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;

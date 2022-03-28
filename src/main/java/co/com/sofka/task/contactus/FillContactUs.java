@@ -7,7 +7,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 
 
-import static co.com.sofka.userinterface.practiceform.ContactUs.*;
+import static co.com.sofka.userinterface.contactus.ContactUs.*;
+
 
 
 public class FillContactUs implements Task {
