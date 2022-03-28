@@ -60,6 +60,18 @@ public class Register extends PageObject {
             .the("Register")
             .located(By.cssSelector("#submitAccount > span"));
 
+    public static final Target INFOACCOUNT = Target
+            .the("InfoAccount")
+            .located(By.cssSelector(".info-account"));
+
+    public static final Target ERRORZIP = Target
+            .the("errorZip")
+            .located(By.cssSelector("ol > li"));
+
+
+
+
+
 
 
 
