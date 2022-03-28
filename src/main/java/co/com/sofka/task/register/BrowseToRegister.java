@@ -3,11 +3,11 @@ package co.com.sofka.task.register;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
+
 import net.serenitybdd.screenplay.actions.Scroll;
 
 import static co.com.sofka.userinterface.register.Register.*;
-import static java.lang.Math.random;
+
 
 public class BrowseToRegister implements Task {
 

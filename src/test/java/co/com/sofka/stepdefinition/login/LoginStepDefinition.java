@@ -6,13 +6,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.hamcrest.Matchers;
 
+import static co.com.sofka.question.login.LoginError.loginError;
 import static co.com.sofka.question.register.Register.register;
 import static co.com.sofka.task.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.task.login.FillLog.fillLog;
+import static co.com.sofka.task.login.FillLogError.fillLogError;
 import static co.com.sofka.task.login.FillPreLogin.fillPreLogin;
 import static co.com.sofka.task.register.BrowseToRegister.browseToregister;
 
-import static java.lang.Math.random;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -23,9 +25,6 @@ public class LoginStepDefinition extends Setup {
     public static String usedMail(){
         return "johanmm123@hotmail.com";
     }
-
-
-
 
 
     @Given("the user is on landing page")
@@ -60,7 +59,6 @@ public class LoginStepDefinition extends Setup {
         );
 
 
-
     }
     @When("him has filled it and submitted")
     public void himHasFilledItAndSubmitted() {
@@ -84,8 +82,13 @@ public class LoginStepDefinition extends Setup {
     }
 
 
+
     @Given("the user is on landing page of automationpractice")
     public void theUserIsOnLandingPageOfAutomationpractice() {
+
+
+        actorSetupTheBrowser("Johan");
+        theActorInTheSpotlight().wasAbleTo(openLandingPage());
 
     }
 
@@ -93,20 +96,28 @@ public class LoginStepDefinition extends Setup {
     @When("him browse to log")
     public void himBrowseToLog() {
 
+        theActorInTheSpotlight()
+                .attemptsTo(browseToregister());
+
+
+
     }
     @When("him has filled it without password and submitted")
     public void himHasFilledItWithoutPasswordAndSubmitted() {
+
+        theActorInTheSpotlight().attemptsTo(
+                fillLogError()
+
+        );
 
     }
     @Then("the user will see a password required error message.")
     public void theUserWillSeeAPasswordRequiredErrorMessage() {
 
+        theActorInTheSpotlight().should(
+                seeThat(loginError(), Matchers.equalTo(true)));
+
     }
-
-
-
-
-
 
 
 }

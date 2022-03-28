@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 
 import static co.com.sofka.userinterface.register.Register.ERRORZIP;
-import static co.com.sofka.userinterface.register.Register.INFOACCOUNT;
+
 
 public class RegisterZipError implements Question<Boolean> {
 

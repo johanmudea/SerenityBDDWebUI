@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 
 
-import static co.com.sofka.task.register.FillRegister.usedEmail;
+
 import static co.com.sofka.userinterface.register.Register.*;
 
 
